@@ -35,7 +35,7 @@ txtColor.addEventListener('change', () => {
 const fileOptions = {
     types: [{
         description: 'PNG files',
-        accept: {'image/png': ['.pnxg']}
+        accept: {'image/png': ['.png']}
     }]
 };
 
