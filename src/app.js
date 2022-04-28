@@ -63,3 +63,17 @@ btnCopy.addEventListener('click', async () => {
         new ClipboardItem({[blob.type]: blob})
     ]);
 });
+
+const btnPaste = document.querySelector('#paste');
+btnPaste.addEventListener('click', async () => {
+    const clipboardItems = await navigator.clipboard.read();
+    for (const clipboardItem of clipboardItems) {
+        for (const type of clipboardItem.types) {
+            if (type === 'image/png') {
+                const blob = await clipboardItem.getType(type);
+                const image = await getImage(blob);
+                ctx.drawImage(image, 0, 0);
+            }
+        }
+    }
+})
