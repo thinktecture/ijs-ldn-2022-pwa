@@ -26,3 +26,8 @@ canvas.addEventListener('pointermove', event => {
 canvas.addEventListener('pointerup', event => {
     previousPoint = null;
 });
+
+const txtColor = document.querySelector('#color');
+txtColor.addEventListener('change', () => {
+    ctx.fillStyle = txtColor.value;
+});
