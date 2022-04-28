@@ -19,5 +19,11 @@
             "src": "icon.png",
             "sizes": "512x512"
         }]
+    }],
+    "file_handlers": [{
+        "action": "/index.html",
+        "accept": {
+            "image/png": [".png"]
+        }
     }]
 }
